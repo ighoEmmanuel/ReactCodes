@@ -2,10 +2,12 @@ import React,{useState} from 'react'
 import styles from "./SignUp.module.css"
 import Button from "../../../reuseable/CustomButton.jsx"
 import { useSignUpMutation} from "../../../service/userAuthApi.jsx";
-import {Link} from "react-router";
+import {Link , useNavigate } from "react-router";
 
 
 const SignUp = () => {
+
+    const navigate = useNavigate();
 
     const userDetails = {
         userName: "",
@@ -31,6 +33,10 @@ const SignUp = () => {
         e.preventDefault();
         try{
             const response = await signUp(userData).unwrap();
+            console.log(response)
+            if(response.id){
+                navigate("/login")
+            }
             // console.log(response.message)
             console.log(response);
         }catch(error){

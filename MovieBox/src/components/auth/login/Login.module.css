@@ -16,3 +16,13 @@ body{
     margin-top: 10px;
     color: black;
 }
+
+#form{
+    align-content: center;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.8);
+    background: whitesmoke;
+    padding: 100px;
+    border-radius: 15px;
+    max-width: 200px;
+    margin:80px auto;
+}
