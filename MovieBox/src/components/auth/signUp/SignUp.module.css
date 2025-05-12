@@ -1,0 +1,45 @@
+
+body{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: black;
+}
+
+
+.signUp input{
+    display: block;
+    margin-top: 10px;
+    border: gray solid 1px;
+}
+
+.signUp label{
+    display: block;
+    margin-top: 10px;
+    color: black;
+}
+
+#form{
+    align-content: center;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.8);
+    background: whitesmoke;
+    padding: 100px;
+    border-radius: 15px;
+    max-width: 200px;
+    margin:80px auto;
+}
+
+Button{
+    color: white;
+    background-color: blue;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+Button:hover{
+    background-color: #31318a;
+    transform: translateY(-5px);
+}
