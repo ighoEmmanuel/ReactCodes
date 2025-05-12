@@ -8,9 +8,7 @@ function App() {
 
 
   return (
-    <>
-      <SignUp />
-    </>
+    <RouterProvider router={router}/>
   )
 }
 
