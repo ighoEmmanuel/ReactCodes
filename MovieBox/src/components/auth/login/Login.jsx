@@ -32,22 +32,25 @@ const Login = () => {
     return (
         <>
             <div onSubmit={submitHandler} className={style.form}>
-                <div></div>
-                <label htmlFor="email">Email</label>
-                <input type="email"
-                    name="email"
-                    onChange={handelChange}
-                    required
-                />
-                <label htmlFor="password">Password</label>
-                <input type="password"
-                    name="password"
-                    onChange={handelChange}
-                    required
-                />
+                <div id={style.form}>
+                    <form action="">
+                        <label htmlFor="email">Email</label>
+                        <input type="email"
+                            name="email"
+                            onChange={handelChange}
+                            required
+                        />
+                        <label htmlFor="password">Password</label>
+                        <input type="password"
+                            name="password"
+                            onChange={handelChange}
+                            required
+                        />
 
-                <CustomButton  type="sumbit" text={"Login"} />
-                <Link to={"/signup"}>Signup</Link>
+                        <CustomButton  type="sumbit" text={"Login"} />
+                        <Link to={"/signup"}>Signup</Link>
+                    </form>
+                </div>
             </div>
         </>
 
