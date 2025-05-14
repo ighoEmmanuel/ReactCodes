@@ -1,11 +1,4 @@
 
-body{
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    background-color: black;
-}
-
 
 .signUp input{
     display: block;
@@ -20,8 +13,10 @@ body{
 }
 
 #form{
+    display: grid;
+    place-items: center;
     align-content: center;
-    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.8);
+    box-shadow: 5px 5px 10px black;
     background: whitesmoke;
     padding: 100px;
     border-radius: 15px;
