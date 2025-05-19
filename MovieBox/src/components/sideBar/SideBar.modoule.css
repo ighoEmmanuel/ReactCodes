@@ -1,0 +1,44 @@
+.display{
+    background-color: #31318a;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.now-playing{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    white-space: nowrap;
+    margin-bottom: 30px;
+}
+
+.now-playing:hover{
+    color: #0000ed;
+}
+
+
+.now-playing:active{
+    background-color: gray;
+    color: greenyellow;
+}
+
+
+.popular-movie{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    white-space: nowrap;
+    margin-bottom: 30px;
+}
+
+
+.popular-movie:hover{
+    color: #0000ed;
+}
+
+
+.popular-movie:active{
+    background-color: gray;
+    color: greenyellow;
+}

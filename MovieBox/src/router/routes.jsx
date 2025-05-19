@@ -3,6 +3,7 @@ import SignUp from "../components/auth/signUp/SignUp.jsx";
 import Login from "../components/auth/login/Login.jsx";
 import Layout from "../components/layout/Layout.jsx";
 import NowPlaying  from "../components/movies/NowPlaying.jsx";
+import Popular from "../components/movies/Popular.jsx";
 
 const router = createBrowserRouter([
     {
@@ -22,8 +23,12 @@ const router = createBrowserRouter([
         element: <Layout />,
         children: [
             {
-                path: "",
+                path: "now-playing",
                 element:<NowPlaying/>
+            },
+            {
+                path: "popular",
+                element:<Popular/>
             }
         ]
     }

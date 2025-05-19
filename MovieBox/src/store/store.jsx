@@ -9,9 +9,12 @@ export const store  = configureStore({
         [movieApi.reducerPath]: movieApi.reducer
     },
 
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware(
-        getDefaultMiddleware().concat(userAuthApiSlice.middleware)
-    )
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat(
+            userAuthApiSlice.middleware,
+            movieApi.middleware
+        )
+
 })
 
 
