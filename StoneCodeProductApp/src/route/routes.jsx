@@ -2,7 +2,7 @@ import {createBrowserRouter}  from "react-router";
 import DummyProduct from "../components/products/DummyProduct.jsx";
 import Layout from "../components/layout/Layout.jsx";
 import FakeStore from "../components/products/FakeStore.jsx";
-
+import ProductDetails from "../reuseable/ProductDetalis.jsx";
 
 const routes = createBrowserRouter([
     {
@@ -16,6 +16,10 @@ const routes = createBrowserRouter([
             {
                 path: "fake-store",
                 element: <FakeStore/>
+            },
+            {
+                path: "dummy-product/:id",  // <--- This is correct
+                element: <ProductDetails />
             }
         ]
     },

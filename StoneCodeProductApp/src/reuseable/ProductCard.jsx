@@ -1,10 +1,7 @@
-// const ImageBaseUrl = 'dummyjson.com/'
-
-import About from "./About.jsx";
-
+import styles from  './Product.module.css'
+import {Link} from "react-router";
 const ProductCard= (props) => {
     const {data, isLoading} = props.data;
-
 
     if(isLoading){
         return <div>Loading...</div>;
@@ -13,16 +10,22 @@ const ProductCard= (props) => {
 
 
     return (
-        <div className="MovieCard" >
+        <div className={styles.productCard}>
             {
                 data?.products.map((result) =>(
-                    <div key={result.id} className="id" onClick={() => About(result.id)}>
-                        <img src={`${result.images}`}/>
-                        <p>${result.price}</p>
-                        <p>{result.title}</p>
-                        <p>{result.description}</p>
-                        <p>{result.vote_average}</p>
-
+                    <div className={styles.card}>
+                        <div key={result.id} className="id"   >
+                            <img src={`${result.images}`}/>
+                            <p>Title:{result.title}</p>
+                            <p>Price:${result.price}</p>
+                            <p className={styles.viewDescription}><b>Description: </b>{result.description}</p>
+                            <button>
+                                <Link to={`/home/dummy-product/${result.id}`}
+                                      className={styles.viewProduct}>
+                                    View Product
+                                </Link>
+                            </button>
+                        </div>
                     </div>
 
                 ))

@@ -1,3 +1,4 @@
+import styles from  './Product.module.css'
 const FakeStoreCard= (props) => {
     const {data, isLoading} = props.data;
 
@@ -8,16 +9,18 @@ const FakeStoreCard= (props) => {
 
 
     return (
-        <div className="MovieCard">
+        <div className={styles.productCard}>
             {
                 data?.map((result) =>(
-                    <div key={result.id} className="id">
-                        <img src={`${result.image}`}/>
-                        <p>${result.price}</p>
-                        <p>{result.title}</p>
-                        <p>{result.description}</p>
-                        <p>{result.vote_average}</p>
+                    <div className={styles.card}>
+                        <div key={result.id} className="id">
+                            <img src={`${result.image}`}/>
+                            <p>Title:{result.title}</p>
+                            <p>Price:${result.price}</p>
+                            <p className={styles.viewDescription}>{result.description}</p>
+                            {/*<p>{result.vote_average}</p>*/}
 
+                        </div>
                     </div>
 
                 ))

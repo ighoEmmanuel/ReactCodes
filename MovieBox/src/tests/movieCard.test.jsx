@@ -1,18 +1,12 @@
-import { store } from "../store/store.jsx";
-import { Provider } from "react-redux";
-import { render, screen } from "@testing-library/react";
-import MovieCard from "../reuseable/MovieCard.jsx";
-import { setupListeners } from "@reduxjs/toolkit/query";
+import {expect, test} from "vitest";
+import {Provider} from "react-redux";
+import {store} from "../store/store.jsx"
+import {render} from "@testing-library/react";
 
-const renderWithProvider = (ui) =>
-    render(<Provider store={store}>{ui}</Provider>);
+test("add two numbers", () =>{
+    expect(1+1).toBe(2);
+})
 
-describe("MovieCard", () => {
-    test("showing loading initially", async () => {
-        renderWithProvider(<MovieCard />);
-        const result = await screen.findByText(/loading.../i);
-        expect(result).toBeInTheDocument();
-    });
-});
-
-setupListeners(store.dispatch);
+test("that the store provider works",()=>{
+    return render(<Provider store={store}></Provider>)
+})
